@@ -1,0 +1,15 @@
+version: '4'
+
+services:
+  backend:
+    container_name: backend
+    build: 
+      context: ./source/back
+    volumes: 
+      - ./source/back/app:/app
+  frontend:
+    container_name: frontend
+    build: 
+      context: ./source/front
+    volumes:
+      - ./source/front/app:/app
